@@ -1,7 +1,20 @@
-import React from "react";
-
+"use client";
+import { useRouter } from "next/navigation";
 const New = () => {
-  return <div>New</div>;
+  const router = useRouter();
+  return (
+    <>
+      <button
+        className="btn btn-primary"
+        onClick={() => {
+          router.push("/users");
+        }}
+      >
+        Create
+      </button>
+      ;
+    </>
+  );
 };
 
 export default New;
